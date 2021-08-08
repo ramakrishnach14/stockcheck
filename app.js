@@ -20,7 +20,8 @@ formDataInp.addEventListener("submit" , (e)=>{
 	currentPrice = inpData[2];
 
 	if(!Number(purchasePrice) || !Number(stockQuantity) || !Number(currentPrice) ){
-		console.log("input wrong");
+		//console.log("input wrong");
+		outPutDiv.innerText = "please enter proper input";
 	} else {
 		let result = checkStock(purchasePrice , stockQuantity , currentPrice);
 		outPutDiv.innerText = result;
