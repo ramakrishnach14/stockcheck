@@ -38,10 +38,10 @@ function checkStock(pp , sq , cp){
 
 	if(totalPurchasePrice > presentTotalPrice){
 		let lossPercentage = Math.floor(((totalPurchasePrice - presentTotalPrice)*100)/totalPurchasePrice);
-		return "loss is "+ lossPercentage + "%";
+		return "loss in percentage is  "+ lossPercentage + "% " + "and absolute value is "+ Number(totalPurchasePrice - presentTotalPrice);
 	} else if (presentTotalPrice > totalPurchasePrice){
 		let profitPercentage = Math.floor(((presentTotalPrice - totalPurchasePrice)*100)/totalPurchasePrice);
-		return "profit is "+ profitPercentage + "%";
+		return "profit in percentage is "+ profitPercentage + "% " + "and absolute value is " + Number(presentTotalPrice - totalPurchasePrice);
 	} else{
 		return "no profit or loss";
 	}
